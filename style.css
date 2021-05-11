@@ -10,4 +10,5 @@ li {
 .col {
   flex-basis: 50%;
   border: 1px solid #000;
+  padding: 1em;
 }

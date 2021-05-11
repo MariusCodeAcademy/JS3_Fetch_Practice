@@ -74,7 +74,15 @@ function showUserInfo(event) {
   const url = "https://jsonplaceholder.typicode.com/users/" + userId;
   // getOneUser(url);
   fetchData(url, (user) => {
-    userInfoEl.innerHTML = `<p>Name: ${user.name}</p>`;
+    // userInfoEl.innerHTML = `<p>Name: ${user.name}</p>`;
+    userInfoEl.innerHTML = null;
+    for (const key in user) {
+      // debugger;
+      // praleisti id savybe
+      if (key === "id") continue;
+      if (typeof user[key] === "object") user[key] = "<button>more info</button>";
+      userInfoEl.innerHTML += `<p>${key}: ${user[key]}</p>`;
+    }
   });
   // jei paspaudziau ant id 6
   // turiu siusti uzklausa
