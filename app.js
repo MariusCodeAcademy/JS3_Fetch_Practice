@@ -13,7 +13,7 @@
  * 2.1 gauti paspausto userio id
  *
  * 2.2 atlikti nauja fetch requesta i api ir gauti useri su nurodytu id
- *
+ * pvz https://jsonplaceholder.typicode.com/users/5
  *
  *
  * 3 parisiusti todo objektus nuo 41 iki 57
@@ -47,24 +47,38 @@
  *
  *
  */
+
+import { fetchData, getOneUser } from "./js/fetch.js";
+
+const ulEl = document.getElementById("ul");
 let num = "green";
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then((resp) => resp.json())
-  .then((data) => {
-    // cia jau turim data
-    console.log(data);
+const url = "https://jsonplaceholder.typicode.com/users";
 
-    filterData(data);
-    num = data;
-  })
-  .catch((err) => console.log(err));
-
-num; // 'green'
+fetchData(url, filterData);
 
 function filterData(data) {
   console.log(data);
-  let str = data.reduce((htmlStr, obj) => {
-    return (htmlStr += `<li>${obj.username}, ${obj.email} </li>`);
-  }, "");
-  console.log(str);
+
+  data.forEach((user) => {
+    const li = document.createElement("li");
+    li.addEventListener("click", showUserInfo);
+    li.dataset.id = user.id;
+    li.textContent = `${user.username}, ${user.email}`;
+    ulEl.appendChild(li);
+  });
+}
+
+function showUserInfo(event) {
+  console.log(event.target);
+  const userId = event.target.dataset.id;
+  const url = "https://jsonplaceholder.typicode.com/users/" + userId;
+  // getOneUser(url);
+  fetchData(url, showUserOnTheRight);
+  // jei paspaudziau ant id 6
+  // turiu siusti uzklausa
+  //https://jsonplaceholder.typicode.com/users/6
+}
+
+function showUserOnTheRight(user) {
+  console.log(user);
 }
