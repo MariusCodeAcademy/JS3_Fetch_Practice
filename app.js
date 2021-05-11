@@ -51,7 +51,7 @@
 import { fetchData, getOneUser } from "./js/fetch.js";
 
 const ulEl = document.getElementById("ul");
-let num = "green";
+let userInfoEl = document.getElementById("user-info");
 const url = "https://jsonplaceholder.typicode.com/users";
 
 fetchData(url, filterData);
@@ -73,12 +73,10 @@ function showUserInfo(event) {
   const userId = event.target.dataset.id;
   const url = "https://jsonplaceholder.typicode.com/users/" + userId;
   // getOneUser(url);
-  fetchData(url, showUserOnTheRight);
+  fetchData(url, (user) => {
+    userInfoEl.innerHTML = `<p>Name: ${user.name}</p>`;
+  });
   // jei paspaudziau ant id 6
   // turiu siusti uzklausa
   //https://jsonplaceholder.typicode.com/users/6
-}
-
-function showUserOnTheRight(user) {
-  console.log(user);
 }
