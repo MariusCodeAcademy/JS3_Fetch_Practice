@@ -84,14 +84,17 @@ function showUserInfo(event) {
 // 3 parisiusti todo objektus nuo 41 iki 57
 let urlTodo = "https://jsonplaceholder.typicode.com/todos";
 
-fetchData(urlTodo, getCorrectTodos);
+fetchData(urlTodo, handleTodos);
 
-function getCorrectTodos(todoArr) {
+function handleTodos(todoArr) {
   console.log("correct", todoArr);
-  const filteredTodos = todoArr.filter((oneTodo) => "<salyga>");
-  console.log("filteredTodos", filteredTodos);
-}
-// console.clear();
-let karen = getOneUser("https://jsonplaceholder.typicode.com/users/4");
+  const filteredTodos = todoArr.filter(({ id }) => id >= 41 && id <= 57);
 
-console.log("karen", karen);
+  // isviltruotam masyvui 3.1
+  filteredTodos.forEach((todo) => (todo.letterCount = todo.title.length));
+
+  console.table(filteredTodos);
+}
+
+// console.clear();
+// getOneUser("https://jsonplaceholder.typicode.com/users/4");
