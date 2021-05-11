@@ -54,9 +54,9 @@ const ulEl = document.getElementById("ul");
 let userInfoEl = document.getElementById("user-info");
 const url = "https://jsonplaceholder.typicode.com/users";
 
-fetchData(url, filterData);
+fetchData(url, generateList);
 
-function filterData(data) {
+function generateList(data) {
   console.log(data);
 
   data.forEach((user) => {
@@ -80,3 +80,18 @@ function showUserInfo(event) {
   // turiu siusti uzklausa
   //https://jsonplaceholder.typicode.com/users/6
 }
+
+// 3 parisiusti todo objektus nuo 41 iki 57
+let urlTodo = "https://jsonplaceholder.typicode.com/todos";
+
+fetchData(urlTodo, getCorrectTodos);
+
+function getCorrectTodos(todoArr) {
+  console.log("correct", todoArr);
+  const filteredTodos = todoArr.filter((oneTodo) => "<salyga>");
+  console.log("filteredTodos", filteredTodos);
+}
+// console.clear();
+let karen = getOneUser("https://jsonplaceholder.typicode.com/users/4");
+
+console.log("karen", karen);

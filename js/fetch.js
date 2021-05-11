@@ -12,6 +12,10 @@ export function fetchData(url, successCallback) {
 export function getOneUser(url) {
   fetch(url)
     .then((resp) => resp.json())
-    .then((data) => console.log(data))
+    .then((data) => noriuDuomenu(data))
     .catch((err) => console.log(err));
+}
+
+function noriuDuomenu(data) {
+  return data;
 }
