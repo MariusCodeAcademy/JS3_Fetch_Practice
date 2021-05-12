@@ -1,0 +1,16 @@
+1F. Sukurti ivesties lauka ir mygtuka 
+    i ivesties lauka ivedus skaiciu ir paspaudus mygtuka parsiusti 
+    ta nuotrauka is https://jsonplaceholder.typicode.com/photos 
+    kurios id atitinka ivesta skaiciu. 
+    1.1F atvaizduoti nuotrauka kaip paveiksleli html
+
+2F. Sukurti pasirinkimo lauka <select></select>
+    jo pasirinkimus uzpildyti is masyvo [ 'posts', 'comments', 'albums', 'photos' ];
+    greta sukurti ivesties lauka  su mygtuku
+
+    2.1F gauti pasirinkto lauko reiksme
+    2.3F panaudoti ivesties lauko reiksme ir gauti atitinkama resursa 
+    is https://jsonplaceholder.typicode.com/
+    atspausdinti konsoleje sarasa ir html sugeneruoti antraste "gauti duomenys"
+    2.3F gauti ivesties lauko reiksme ir panaudoti ja gauti tos rusies resurso 
+    duomenis kurie atitinka id. Atspausdinti duomenis konsoleje
