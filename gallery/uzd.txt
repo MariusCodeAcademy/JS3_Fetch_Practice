@@ -19,3 +19,6 @@
     ji paspaudus parsiusti ir atvaizduoti paveiksleli is 
     https://picsum.photos/1000/800 naujas paveiklelis kiekvienu paspaudimu
     3.1F parsisiusti paveiksleli failo (blob) formatu 
+
+
+4f. Sukurti nauja posta su fetch ir nusiusti i https://jsonplaceholder.typicode.com/

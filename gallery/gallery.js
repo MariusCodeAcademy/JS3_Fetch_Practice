@@ -1,5 +1,4 @@
 "use strict"; // here we go again
-
 console.log("gallery");
 import { getImages } from "./getData.js";
 const loadBtn = document.getElementById("btn");
@@ -17,10 +16,21 @@ getImages((data) => {
   console.log(first50);
   generateImagesOnHtml(first50.filter((o) => o.id <= 9));
 });
-
+const outEl = document.createElement("div");
+outEl.className = "flex";
+loadBtn.before(outEl);
 function generateImagesOnHtml(data) {
   //   console.log("generating", data);
-  console.table(data);
+  //   console.table(data);
+  data.forEach(({ title, url }) => {
+    const imgEl = `
+      <figure>
+        <img src="${url}" alt="Trulli" style="width:100%">
+        <figcaption>${title}</figcaption>
+     </figure>
+      `;
+    outEl.insertAdjacentHTML("beforeend", imgEl);
+  });
 }
 
 loadBtn.addEventListener("click", () => {

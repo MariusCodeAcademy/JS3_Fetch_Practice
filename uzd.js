@@ -36,13 +36,16 @@
  * 4.2 tureti mygtuka load more kuris uzkrauna papildomai dar po viena eile
  * paveiksleliu. uzkrauti ir prideti tik naujus neperrasant jau esanciu
  *
+ *
+ *
  * 4.3 padaryti mygtuka 'reset' kuris paliktu galerijoj tik pirmus
  * 9 paveikslelius
  *
  * 4.4 padaryti mygtuka kuris paslepia visus pavadinmus po paveiksleliais
  * 'pic only' btn
  *
- *
+ * 5. padaryti kad puslapiui nusislinkus i apacia mes automatiskai
+ * uzkrauname papildoma eile nuotrauku
  *
  *
  *

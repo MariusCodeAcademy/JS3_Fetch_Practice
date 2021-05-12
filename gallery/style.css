@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex > figure {
+  width: 20%;
+}
+
+img {
+  border-radius: 2em;
+}
