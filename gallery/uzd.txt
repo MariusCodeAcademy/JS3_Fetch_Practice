@@ -14,3 +14,8 @@
     atspausdinti konsoleje sarasa ir html sugeneruoti antraste "gauti duomenys"
     2.3F gauti ivesties lauko reiksme ir panaudoti ja gauti tos rusies resurso 
     duomenis kurie atitinka id. Atspausdinti duomenis konsoleje
+
+3F. sukurti mygtuka "random image"
+    ji paspaudus parsiusti ir atvaizduoti paveiksleli is 
+    https://picsum.photos/1000/800 naujas paveiklelis kiekvienu paspaudimu
+    3.1F parsisiusti paveiksleli failo (blob) formatu 
